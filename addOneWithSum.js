@@ -12,6 +12,8 @@ const addOneWithSum = (ourArray) => {
 
 addOneWithSum(mattsArray)
 console.log(addOneWithSum(mattsArray));
+
+//This is a test comment and commit
 // const ..Hold a value in a variable
 
 // addOneWithSum ...Is a name we gave the varial held with "const"
