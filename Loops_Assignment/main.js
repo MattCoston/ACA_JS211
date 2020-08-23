@@ -31,22 +31,46 @@ let arrayOfPersons = [
   {
     firstName: "Jane",
     lastName: "Doe",
-    birthDate: "Jan 5, 1925",
+    birthDate: 1926,
     gender: "female",
   },
 
   {
     firstName: "John",
     lastName: "Smith",
-    birthDate: "Jan 6, 1925",
+    birthDate: 1925,
     gender: "male",
   },
   {
     firstName: "Gomer",
     lastName: "Pyle",
-    birthDate: "July 5, 1945",
+    birthDate: 1945,
     gender: "male",
   },
 ];
 
-console.log(arrayOfPersons);
+// console.log(arrayOfPersons);
+
+
+// Create a function that uses a for...of loop and an if statement to console.log the value associated with the key birthDate of each object if the birth year is an odd number.
+
+
+for (let  element of arrayOfPersons){
+  if (element.gender  === 'female') {
+    console.log(arrayOfPersons)
+  }
+  
+}
+
+
+
+// Use .map() to map over the arrayOfPersons and console.log() their information.
+
+
+// Use .filter() to filter the persons array and console.log only males in the array.
+
+
+// Create a function that returns true if the value of birthDate is before Jan 1, 1990.
+
+
+// Use .filter() to filter the persons array and console.log only people that were born before Jan 1, 1990.
