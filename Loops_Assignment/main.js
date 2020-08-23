@@ -44,7 +44,7 @@ let arrayOfPersons = [
   {
     firstName: "Gomer",
     lastName: "Pyle",
-    birthDate: 1945,
+    birthDate: 1946,
     gender: "male",
   },
 ];
@@ -55,22 +55,44 @@ let arrayOfPersons = [
 // Create a function that uses a for...of loop and an if statement to console.log the value associated with the key birthDate of each object if the birth year is an odd number.
 
 
-for (let  element of arrayOfPersons){
-  if (element.gender  === 'female') {
-    console.log(arrayOfPersons)
-  }
+// for (let  element of arrayOfPersons){
+//   if (element.birthDate % 2 == 0) {
+//     console.log(element)
+//   }
   
-}
+// }
 
 
 
 // Use .map() to map over the arrayOfPersons and console.log() their information.
+// let printFullDetails = (array) => {
+//    return `First Name is ${array.firstName} ${array.lastName} ${array.birthDate} ${array.gender}`
+// }
 
+// let mappedPersonsArray = arrayOfPersons.map(printFullDetails)
+// console.log(mappedPersonsArray)
 
 // Use .filter() to filter the persons array and console.log only males in the array.
 
+// let filteredMalesOnly = (array) => {
+//   if (array.gender === "male"){
+//     console.log(array)
+//   }
+// }
+
+// arrayOfPersons.filter(filteredMalesOnly)
 
 // Create a function that returns true if the value of birthDate is before Jan 1, 1990.
+let preDOB = (array) => {
+  if(array.birthDate < 1990) {
+    return true
+  } else {
+    return false
+  }
+}
 
+console.log(arrayOfPersons.every(preDOB))
 
 // Use .filter() to filter the persons array and console.log only people that were born before Jan 1, 1990.
+
+console.log(arrayOfPersons.filter(preDOB))
