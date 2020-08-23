@@ -3,6 +3,7 @@
 const assert = require('assert');
 const readline = require('readline');
 const { truncate } = require('fs');
+const { start } = require('repl');
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
@@ -20,12 +21,16 @@ const printStacks = () => {
   console.log("c: " + stacks.c);
 }
 
-const movePiece = () => {
+const movePiece = (startStack, endStack) => {
   // Your code here
-    
+  // Need to move one piece from starter to dest stack
+  // right now move pops off the last of the a stack
+    let move = stacks.startStack.pop()
+    // let dest = endStack.push(move)
+    console.log(move)
 
 }
-
+movePiece()
 const isLegal = () => {
   // Your code here
   
