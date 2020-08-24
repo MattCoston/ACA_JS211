@@ -9,12 +9,18 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
+
 let stacks = {
   a: [4, 3, 2, 1],
   b: [],
   c: []
 };
 
+let a = stacks.a
+let b = stacks.b
+let c = stacks.c
+
+console.log(a,b,c)
 const printStacks = () => {
   console.log("a: " + stacks.a);
   console.log("b: " + stacks.b);
@@ -24,10 +30,16 @@ const printStacks = () => {
 const movePiece = (startStack, endStack) => {
   // Your code here
   // Need to move one piece from starter to dest stack
-  // right now move pops off the last of the a stack
-    let move = stacks.startStack.pop()
-    // let dest = endStack.push(move)
-    console.log(move)
+  let originMove = startStack
+  let destinationMove = endStack
+  if(originMove == 'a' &&  destinationMove == 'b'){
+    a.pop()
+    b.push()
+    return stacks
+  }
+
+ 
+    
 
 }
 movePiece()
@@ -42,22 +54,22 @@ const checkForWin = () => {
   if (stacks.b.length === 4)
   {
       return true
-      console.log("Congrats you won!")
   } else if (stacks.c.length === 4)
   {
     return true
-    console.log("Congrats you won!")
   } else {
       return false
   }
 }
-checkForWin()
+// console.log(stacks.a.length)
+// console.log(stacks.b.length)
+// console.log(stacks.c.length)
+
 const towersOfHanoi = (startStack, endStack) => {
 //   // Your code here
-//     let starterStack = stacks[startStack]
-//     let endingStack = stacks[endStack]
-//     console.log(starterStack)
-//     console.log(endingStack)
+    let starterStack = stacks.startStack
+    let endingStack = stacks.endStack
+    
 }
 
 const getPrompt = () => {
