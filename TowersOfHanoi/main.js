@@ -20,7 +20,7 @@ let a = stacks.a
 let b = stacks.b
 let c = stacks.c
 
-console.log(a,b,c)
+
 const printStacks = () => {
   console.log("a: " + stacks.a);
   console.log("b: " + stacks.b);
@@ -28,21 +28,30 @@ const printStacks = () => {
 }
 
 const movePiece = (startStack, endStack) => {
-  // Your code here
-  // Need to move one piece from starter to dest stack
+  // Need to move one piece from origin stack to destination stack
   let originMove = startStack
   let destinationMove = endStack
   if(originMove == 'a' &&  destinationMove == 'b'){
-    a.pop()
-    b.push()
+    b.push(a.pop())
+    return stacks
+  } if (originMove == 'a' && destinationMove == 'c') {
+    c.push(a.pop())
+    return stacks
+  } if (originMove == 'b' && destinationMove == 'c'){
+    c.push(b.pop())
+    return stacks
+  } if (originMove == 'b' && destinationMove == 'a'){
+    a.push(b.pop())
+    return stacks
+  } if (originMove == 'c' && destinationMove == 'a'){
+    a.push(c.pop())
+    return stacks
+  } if (originMove == 'c' && destinationMove == 'b'){
+    b.push(c.pop())
     return stacks
   }
-
- 
-    
-
 }
-movePiece()
+
 const isLegal = () => {
   // Your code here
   
@@ -50,26 +59,24 @@ const isLegal = () => {
 }
 
 const checkForWin = () => {
-  // Your code here
-  if (stacks.b.length === 4)
+  /* if statment that equates to if the length of b or c is equal to 4 return true and console log the win statement
+  otherwise return false*/
+  if (b.length === 4)
   {
+      console.log("Congrats you have won!")
       return true
-  } else if (stacks.c.length === 4)
+  } else if (c.length === 4)
   {
-    return true
+        console.log("Congrats you have won!")
+        return true
   } else {
       return false
   }
 }
-// console.log(stacks.a.length)
-// console.log(stacks.b.length)
-// console.log(stacks.c.length)
 
 const towersOfHanoi = (startStack, endStack) => {
-//   // Your code here
-    let starterStack = stacks.startStack
-    let endingStack = stacks.endStack
-    
+  movePiece(startStack, endStack)
+  checkForWin()
 }
 
 const getPrompt = () => {
