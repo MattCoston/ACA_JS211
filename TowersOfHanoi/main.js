@@ -120,7 +120,7 @@ const checkForWin = () => {
       return false
   }
 }
-
+/* This is the main function that runs the program.  It requires both inputs from the user before actions are taken or not depending if they are allowed.  The only function here that does not require startStack and End Stack is CheckforWin()*/
 const towersOfHanoi = (startStack, endStack) => {
   if (isLegal(startStack, endStack) == true){
     movePiece(startStack, endStack)
