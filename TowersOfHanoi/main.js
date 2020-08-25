@@ -1,3 +1,6 @@
+/* This assignment was a lot harder for me than I actually expected.  I cannot still get two of the tests to pass, but the program seems to work properly when the tests are commented out.  I think I have the most trouble with jumping into boilerplate code.  I suspect this is something I am going to have to get used to, but for not it is pretty uncomfortable for me.  I need to study more on dependencies and testing because it took me a while to even get testing going on this repository. */
+
+
 'use strict'
 
 const assert = require('assert')
@@ -145,4 +148,38 @@ getPrompt()
 
 
 /* Unit TESTS WILL GO HERE TOMORROW */
+  describe('towersOfHanoi', () => {
+    it('should print out if an illegal move is made', () => {
+      assert.equal(movePiece('a', 'b'), );
+      assert.equal(movePiece('a', 'c'), );
+      assert.equal(movePiece('a', 'b'), );
+      assert.equal(isLegal('a', 'b'), false)
+    });
+    it('should not allow moving to the same stack', () => {
+      assert.equal(isLegal('a', 'a'), false);
+     });
+    it('show if a game is won', () => {
+      assert.equal(movePiece('a', 'b'), );
+      assert.equal(movePiece('a', 'c'), );
+      assert.equal(movePiece('b', 'c'), );
+      assert.equal(movePiece('a', 'b'), );
+      assert.equal(movePiece('c', 'b'), );
+      assert.equal(movePiece('c', 'a'), );
+      assert.equal(movePiece('b', 'c'), );
+      assert.equal(movePiece('c', 'b'), );
+      assert.equal(movePiece('a', 'c'), );
+      assert.equal(movePiece('c', 'b'), );
+      assert.equal(movePiece('b', 'a'), );
+      assert.equal(movePiece('b', 'c'), );
+      assert.equal(movePiece('a', 'b'), );
+      assert.equal(movePiece('c', 'a'), );
+      assert.equal(movePiece('b', 'a'), );
+      assert.equal(movePiece('b', 'c'), );
+      assert.equal(movePiece('a', 'b'), );
+      assert.equal(movePiece('a', 'c'), );
+      assert.equal(movePiece('b', 'c'), );
+      assert.equal(checkForWin(), true)
 
+    });
+   });
+  

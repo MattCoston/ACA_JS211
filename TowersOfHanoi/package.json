@@ -1,10 +1,10 @@
 {
-  "name": "pig-latin",
+  "name": "rock-paper-scissors",
   "version": "1.0.0",
-  "description": "Practicing String Manipulation with the illysay amegay, Pig Latin!",
+  "description": "Austin Coding Academy - JavaScript Workbook",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AustinCodingAcademy/JS211_PigLatinProject.git"
+    "url": "git+https://github.com/AustinCodingAcademy/JS211_RockPaperScissorsProject.git"
   },
   "scripts": {
     "lint": "htmllint {*.html,./**/*.html} && stylelint ./**/*.css && eslint .",
@@ -13,11 +13,11 @@
     "javascripting": "javascripting",
     "functional-javascript": "functional-javascript"
   },
-  "author": "Clayton Berger",
+  "author": "Kevin Colten",
   "bugs": {
-    "url": "https://github.com/AustinCodingAcademy/JS211_PigLatinProject/issues"
+    "url": "https://github.com/AustinCodingAcademy/JS211_RockPaperScissorsProject/issues"
   },
-  "homepage": "https://github.com/AustinCodingAcademy/JS211_PigLatinProject#readme",
+  "homepage": "https://github.com/AustinCodingAcademy/JS211_RockPaperScissorsProject#readme",
   "dependencies": {
     "eslint": "^3.19.0",
     "functional-javascript-workshop": "^1.0.6",
@@ -25,7 +25,7 @@
     "http-server": "^0.11.1",
     "javascripting": "^2.6.1",
     "jsdom": "^11.6.2",
-    "mocha": "^5.2.0",
+    "mocha": "^5.0.0",
     "postcss-html": "^0.34.0",
     "stylelint": "^7.13.0"
   }
