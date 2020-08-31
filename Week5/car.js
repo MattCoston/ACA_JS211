@@ -28,12 +28,16 @@ class Car {
 
     travel(distance){
         //BUILD THIS FUNCTION OUT
+        let distTravelled = distance * this.mpg
+        console.log(`You can  travel ${distTravelled}`)
+        return distTravelled
     }
 
 }
   let matt = new Car(10, 20)
-  matt.addFuel(15)
+  matt.addFuel(25)
 console.log(matt)
+console.log(matt.travel(5))
 // const assert = require('assert');
 
 // if(typeof describe === 'function'){
