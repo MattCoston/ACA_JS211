@@ -1,10 +1,8 @@
-'use strict'
-
 class Car {
-    vin;
-    mpg;
-    fuelTankSize;
-    currentFuel;
+    // vin;
+    // mpg;
+    // fuelTankSize;
+    // currentFuel;
 
     constructor(iMpg, iTankSize){
         
@@ -15,7 +13,13 @@ class Car {
     }
 
     addFuel(numGallons){
-        this.currentFuel += numGallons;
+        if (this.fuelTankSize < numGallons){
+            console.log("Too much fuel added")
+            return false
+            
+        } else {
+            this.currentFuel += numGallons;
+        }
     }
 
     distanceTillEmpty(){
@@ -27,8 +31,9 @@ class Car {
     }
 
 }
-
-
+  let matt = new Car(10, 20)
+  matt.addFuel(15)
+console.log(matt)
 // const assert = require('assert');
 
 // if(typeof describe === 'function'){
