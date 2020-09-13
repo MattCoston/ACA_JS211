@@ -17,3 +17,22 @@ h1 {
     text-align: center;
     color: blue;
 }
+
+.form-group .col-md-4 .col-md-8{
+    text-align: center;
+}
+
+legend {
+    margin: 15px;
+}
+
+input {
+    text-align: center;
+    display: inline-block;
+}
+
+#about {
+    text-align: center;
+    padding: 100px;
+}
+

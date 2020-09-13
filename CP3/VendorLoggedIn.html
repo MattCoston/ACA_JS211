@@ -15,33 +15,45 @@
   <a href="/VendorHelp.html">Vendor Help & Registration</a> |
   <a href="/About.html">About</a> |
 </nav>
-  <form class="form-horizontal">
+<form class="form-horizontal">
     <fieldset>
     
     <!-- Form Name -->
-    <legend>Vendor Registration</legend>
+    <legend>Form Name</legend>
     
     <!-- Text input-->
     <div class="form-group">
-      <label class="col-md-4 control-label" for="textinput">Username</label>  
+      <label class="col-md-4 control-label" for="textinput">Name of Vendor</label>  
       <div class="col-md-4">
       <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
-        
+      
       </div>
     </div>
     
-    <!-- Password input-->
+    
+    
+    <!-- Multiple Checkboxes -->
     <div class="form-group">
-      <label class="col-md-4 control-label" for="passwordinput">Password Input</label>
+      <label class="col-md-4 control-label" for="checkboxes">Are you open now?</label>
       <div class="col-md-4">
-        <input id="passwordinput" name="passwordinput" type="password" placeholder="" class="form-control input-md">
-        <span class="help-block">Please use 8 characters, Upper and Lowercase and a special character</span>
+      <div class="checkbox">
+        <label for="checkboxes-0">
+          <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+          Yes, we are OPEN!
+        </label>
+        </div>
+      <div class="checkbox">
+        <label for="checkboxes-1">
+          <input type="checkbox" name="checkboxes" id="checkboxes-1" value="2">
+          No, we are CLOSED!
+        </label>
+        </div>
       </div>
     </div>
     
     <!-- Textarea -->
     <div class="form-group">
-      <label class="col-md-4 control-label" for="textarea">Type of Vendor</label>
+      <label class="col-md-4 control-label" for="textarea">What are you selling?</label>
       <div class="col-md-4">                     
         <textarea class="form-control" id="textarea" name="textarea"></textarea>
       </div>
@@ -51,8 +63,8 @@
     <div class="form-group">
       <label class="col-md-4 control-label" for="button1id"></label>
       <div class="col-md-8">
-        <button id="button1id" name="button1id" class="btn btn-success">Submit Button</button>
-        <button id="button2id" name="button2id" class="btn btn-danger">Reset Button</button>
+        <button id="button1id" name="button1id" class="btn btn-success">OPEN</button>
+        <button id="button2id" name="button2id" class="btn btn-danger">CLOSED</button>
       </div>
     </div>
     
