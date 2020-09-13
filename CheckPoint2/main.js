@@ -2,49 +2,49 @@ console.log("JS LOADED")
 
 const arrOfPeople = [
     {
-      id: 2,
+      id: 0,
       name: "Charles Young",
       age: 55,
       skillSet: "welding",
       placeBorn: "Omaha, Nebraska"
     },
     {
-      id: 3,
+      id: 1,
       name: "Judy Twilight",
       age: 35,
       skillSet: "fishing",
       placeBorn: "Louisville, Kentucky"
     },
     {
-      id: 4,
+      id: 2,
       name: "Cynthia Doolittle",
       age: 20,
       skillSet: "tic tac toe",
       placeBorn: "Pawnee, Texas"
     },
     {
-      id: 5,
+      id: 3,
       name: "John Willouby",
       age: 28,
       skillSet: "pipe fitting",
       placeBorn: "New York, New York"
     },
     {
-      id: 6,
+      id: 4,
       name: "Stan Honest",
       age: 20,
       skillSet: "boom-a-rang throwing",
       placeBorn: "Perth, Australia"
     },
     {
-      id: 7,
+      id: 5,
       name: "Mia Watu",
       age: 17,
       skillSet: "acrobatics",
       placeBorn: "Los Angeles, California"
     },
     {
-      id: 8,
+      id: 6,
       name: "Walter Cole",
       age: 32,
       skillSet: "jump rope",
@@ -57,13 +57,24 @@ const arrOfPeople = [
   const redTeam = []
   
   class player {
-    constructor(){}
+    constructor(canThrowBall, canDodgeBall, hasPaid, isHealthy, yearsExperience){
+      this.canThrowBall = canThrowBall;
+      this.canDodgeBall = canDodgeBall;
+      this.hasPaid = hasPaid;
+      this.isHealthy = isHealthy;
+      this.yearsExperience = yearsExperience;
+    }
+
   }
-  class blueTeammate {
-    constructor(){}
+  class blueTeammate extends player {
+    constructor(){
+
+    }
   }
-  class redTeammate {
-    constructor(){}
+  class redTeammate extends player{
+    constructor(){
+
+    }
   }
   
   const listPeopleChoices = () => {
@@ -81,4 +92,17 @@ const arrOfPeople = [
   
   const makePlayer = (id) => {
     console.log(`li ${id} was clicked!`)
+  
+    
+    let addPlayer = listOfPlayers.pop(arrOfPeople[id])
+    listOfPlayers.push(addPlayer)
+    let dbPlayer = new player("yes", "yes" ,"no" ,"yes", 34)
+    console.log(dbPlayer)
+    //NEEDS TO REMOVE FROM LIST OF PEOPLE AND ADD TO DODGE BALL PLAYERS LIST
+    let liElement = document.getElementById('players')
+    
+    listOfPlayers.map(person => {
+      
+      liElement.append(listOfPlayers[addPlayer])
+    })
   }
