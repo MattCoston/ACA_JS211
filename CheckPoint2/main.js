@@ -102,7 +102,9 @@ const arrOfPeople = [
     let liElement = document.getElementById('players')
     
     listOfPlayers.map(person => {
+      listOfPlayers.forEach(element => {
+        liElement.append(listOfPlayers[person])  
+      });
       
-      liElement.append(listOfPlayers[addPlayer])
     })
   }
