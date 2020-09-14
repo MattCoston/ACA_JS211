@@ -103,7 +103,7 @@ const arrOfPeople = [
     
     listOfPlayers.map(person => {
       listOfPlayers.forEach(element => {
-        liElement.append(listOfPlayers[person])  
+        liElement.append(listOfPlayers)  
       });
       
     })
