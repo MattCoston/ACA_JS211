@@ -94,16 +94,17 @@ const arrOfPeople = [
     console.log(`li ${id} was clicked!`)
   
     
-    let addPlayer = listOfPlayers.pop(arrOfPeople[id])
+    let addPlayer = listOfPlayers.pop()
     listOfPlayers.push(addPlayer)
-    let dbPlayer = new player("yes", "yes" ,"no" ,"yes", 34)
-    console.log(dbPlayer)
+    //let dbPlayer = new player("yes", "yes" ,"no" ,"yes", 34)
+    //console.log(dbPlayer)
+    console.log(listOfPlayers)
     //NEEDS TO REMOVE FROM LIST OF PEOPLE AND ADD TO DODGE BALL PLAYERS LIST
     let liElement = document.getElementById('players')
     
     listOfPlayers.map(person => {
       listOfPlayers.forEach(element => {
-        liElement.append(listOfPlayers)  
+        //liElement.append(dbPlayer.name)  
       });
       
     })
