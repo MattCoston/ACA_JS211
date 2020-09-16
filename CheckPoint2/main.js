@@ -109,3 +109,7 @@ const arrOfPeople = [
       
     })
   }
+
+  // simulate sign up and 1 thing about them
+  // click the person and assign them to a team
+  //
