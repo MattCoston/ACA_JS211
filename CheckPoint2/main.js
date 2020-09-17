@@ -69,7 +69,9 @@ const arrOfPeople = [
       this.name = name;
       this.id = id
     }
-
+    makeDBPlayer(player){
+     
+    }
   }
   class blueTeammate extends player {
     constructor(){
@@ -101,8 +103,8 @@ const arrOfPeople = [
   
   const makePlayer = (id) => {
     console.log(`li ${id} was clicked!`)
-    let removeFromPeopleList = document.getElementById('people')
-    removeFromPeopleList.remove("li")
+    //let removeFromPeopleList = document.getElementById('people')
+    //removeFromPeopleList.remove("li")
     let addPlayer = new player(arrOfPeople[0].name, arrOfPeople[0].id)
     listOfPlayers.push(addPlayer)
     console.log(listOfPlayers)
