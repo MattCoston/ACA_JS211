@@ -20,7 +20,7 @@
   "homepage": "https://github.com/AustinCodingAcademy/JS211_RockPaperScissorsProject#readme",
   "dependencies": {
     "eslint": "^3.19.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "functional-javascript-workshop": "^1.0.6",
     "htmllint-cli": "github:kevincolten/htmllint-cli",
     "http-server": "^0.11.1",
